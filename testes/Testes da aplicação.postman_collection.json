@@ -1,0 +1,1462 @@
+{
+	"info": {
+		"_postman_id": "21e1a0a0-cf6c-4450-abf3-2b0593c598b2",
+		"name": "Testes da aplicação",
+		"description": "Chamadas nos endpoins, testando a aplicação",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Requisições não autorizadas",
+			"item": [
+				{
+					"name": "Sem usuário e senha",
+					"item": [
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Requisição sem passar usuário e senha."
+							},
+							"response": []
+						},
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Requisição sem passar usuário e senha."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/fase-de-grupos/1",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/fase-de-grupos/1",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"fase-de-grupos",
+										"1"
+									]
+								},
+								"description": "Requisição sem passar usuário e senha."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/partidas-playoffs/1",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/partidas-playoffs/1",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"partidas-playoffs",
+										"1"
+									]
+								},
+								"description": "Requisição sem passar usuário e senha."
+							},
+							"response": []
+						},
+						{
+							"name": "/pontuacao-final-grupos",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/pontuacao-final-grupos",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"pontuacao-final-grupos"
+									]
+								},
+								"description": "Requisição sem passar usuário e senha."
+							},
+							"response": []
+						},
+						{
+							"name": "/final",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/final",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"final"
+									]
+								},
+								"description": "Requisição sem passar usuário e senha."
+							},
+							"response": []
+						}
+					],
+					"description": "Requisições sem usuário e senha.",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Usuário incorreto",
+					"item": [
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Requisição GET com usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Requisição GET com usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/fase-de-grupos/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/fase-de-grupos/1",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"fase-de-grupos",
+										"1"
+									]
+								},
+								"description": "Requisição GET com usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/partidas-playoffs/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/partidas-playoffs/1",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"partidas-playoffs",
+										"1"
+									]
+								},
+								"description": "Requisição GET com usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/pontuacao-final-grupos",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/pontuacao-final-grupos",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"pontuacao-final-grupos"
+									]
+								},
+								"description": "Requisição GET com usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/final",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/final",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"final"
+									]
+								},
+								"description": "Requisição GET com usuário e senha incorretos."
+							},
+							"response": []
+						}
+					],
+					"description": "Senha correta, porém usuário incorreto.",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Senha incorreta",
+					"item": [
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Requisição GET com senha incorreta na simulação."
+							},
+							"response": []
+						},
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Requisição DELETE com senha incorreta."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/fase-de-grupos/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/fase-de-grupos/1",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"fase-de-grupos",
+										"1"
+									]
+								},
+								"description": "Requisição GET com senha incorreta."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/partidas-playoffs/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/partidas-playoffs",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"partidas-playoffs"
+									]
+								},
+								"description": "Requisição GET com senha incorreta na simulação."
+							},
+							"response": []
+						},
+						{
+							"name": "/pontuacao-final-grupos",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/pontuacao-final-grupos",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"pontuacao-final-grupos"
+									]
+								},
+								"description": "Requisição GET com senha incorreta na simulação."
+							},
+							"response": []
+						},
+						{
+							"name": "/final",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "password",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/final",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"final"
+									]
+								},
+								"description": "Requisição GET com senha incorreta na simulação."
+							},
+							"response": []
+						}
+					],
+					"description": "Requisição com senha incorreta, porém usuário correto.",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Usuário e senha incorretos",
+					"item": [
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "senha",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "senha",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/fase-de-grupos/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "senha",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/fase-de-grupos/1",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"fase-de-grupos",
+										"1"
+									]
+								},
+								"description": "Usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/partidas-playoffs/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "senha",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/partidas-playoffs/1",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"partidas-playoffs",
+										"1"
+									]
+								},
+								"description": "Usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/pontuacao-final-grupos",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "senha",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/pontuacao-final-grupos",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"pontuacao-final-grupos"
+									]
+								},
+								"description": "Usuário e senha incorretos."
+							},
+							"response": []
+						},
+						{
+							"name": "/final",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "senha",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "usuario",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/final",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"final"
+									]
+								},
+								"description": "Usuário e senha incorretos."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "Requisições sem usuário e senha ou com usuário e senha passados incorretos."
+		},
+		{
+			"name": "Requisições autorizadas",
+			"item": [
+				{
+					"name": "Endpoints com erro",
+					"item": [
+						{
+							"name": "/time/fase-de-grupos/0",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/fase-de-grupos/0",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"fase-de-grupos",
+										"0"
+									]
+								},
+								"description": "Chamando um time inexistente."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/fase-de-grupos/81",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/fase-de-grupos/81",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"fase-de-grupos",
+										"81"
+									]
+								},
+								"description": "Chamando um time inexistente."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/fase-de-grupos/abc",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/fase-de-grupos/abc",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"fase-de-grupos",
+										"abc"
+									]
+								},
+								"description": "Chamando um time inexistente."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/partidas-playoffs/0",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/partidas-playoffs/0",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"partidas-playoffs",
+										"0"
+									]
+								},
+								"description": "Chamando um time inexistente."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/partidas-playoffs/81",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/partidas-playoffs/81",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"partidas-playoffs",
+										"81"
+									]
+								},
+								"description": "Chamando um time inexistente."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/partidas-playoffs/abc",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/partidas-playoffs/abc",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"partidas-playoffs",
+										"abc"
+									]
+								},
+								"description": "Chamando um time inexistente."
+							},
+							"response": []
+						}
+					],
+					"description": "Passando um valor para o endpoint com erro.",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Sem erros",
+					"item": [
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Requisição DELETE removendo o campeonato simulado do banco."
+							},
+							"response": []
+						},
+						{
+							"name": "/simular",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/simular",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"simular"
+									]
+								},
+								"description": "Requisição GET simulando um novo campeonato"
+							},
+							"response": []
+						},
+						{
+							"name": "/time/fase-de-grupos/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/fase-de-grupos/1",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"fase-de-grupos",
+										"1"
+									]
+								},
+								"description": "Requisição GET para recuperar os jogos do time 1 na fase de grupos."
+							},
+							"response": []
+						},
+						{
+							"name": "/time/partidas-playoffs/1",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/time/partidas-playoffs/1",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"time",
+										"partidas-playoffs",
+										"1"
+									]
+								},
+								"description": "Requisição GET para recuperar os jogos do time 1 na fase de grupos."
+							},
+							"response": []
+						},
+						{
+							"name": "/pontuacao-final-grupos",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/pontuacao-final-grupos",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"pontuacao-final-grupos"
+									]
+								},
+								"description": "Requisição GET para recuperar os jogos do time 1 na fase de grupos."
+							},
+							"response": []
+						},
+						{
+							"name": "/final",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "user-pass",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://ri-me.herokuapp.com/final",
+									"protocol": "https",
+									"host": [
+										"ri-me",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"final"
+									]
+								},
+								"description": "Requisição GET para recuperar os jogos do time 1 na fase de grupos."
+							},
+							"response": []
+						}
+					],
+					"description": "Fazendo buscas com os times certos.",
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "Requisições autorizadas"
+		}
+	]
+}

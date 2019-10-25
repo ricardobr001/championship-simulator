@@ -1,0 +1,117 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-dark bg-dark justify-content-between">
+    <h1 class="navbar-brand" style="color: white;">Simulador de campeonatos</h1>
+    <form class="form-inline">
+        <h4 class="navbar-text">Procure por times, de 1 a 80 &nbsp;</h4>
+        <input type="text" class="form-control mr-sm-2" [(ngModel)]="query" name="busca" placeholder="Ex: 54">
+        <button type="submit" class="btn btn-light my-2 my-sm-0" (click)="search()">Buscar</button>
+    </form>
+</nav>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col text-center">
+            <button class="btn btn-info" (click)=simular()>Simular um novo campeonato</button>
+        </div>
+    </div>
+    <br>
+    <div *ngIf="arrayFaseDeGrupos">
+        <h1 class="text-center">Tabela da fase de grupos</h1>
+        <table class="table table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">Resultados</th>
+                    <th scope="col">Vencedor</th>
+                    <th scope="col">Perdedor</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let obj of arrayFaseDeGrupos; let i = index">
+                    <th scope="row">{{ i }}</th>
+                    <td>
+                        Time <b>{{ obj.vencedor.nome }}</b> rounds <b>{{ obj.vencedor.rounds }}</b>
+                    </td>
+                    <td>
+                        Time <b>{{ obj.perdedor.nome }}</b> rounds <b>{{ obj.perdedor.rounds }}</b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div *ngIf="arrayPlayoffs">
+        <h1 class="text-center">Tabela playoffs</h1>
+        <table class="table table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">Resultados</th>
+                    <th scope="col">Vencedor</th>
+                    <th scope="col">Perdedor</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let obj of arrayFaseDeGrupos; let i = index">
+                    <th scope="row">{{ i }}</th>
+                    <td>
+                        Time <b>{{ obj.vencedor.nome }}</b> rounds <b>{{ obj.vencedor.rounds }}</b>
+                    </td>
+                    <td>
+                        Time <b>{{ obj.perdedor.nome }}</b> rounds <b>{{ obj.perdedor.rounds }}</b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="!arrayPlayoffs">
+        <h1 class="text-center">{{ playoffsNaoClassificado }}</h1>
+    </div>
+    <br>
+    <h1 class="text-center">Tabela da situação final da fase de grupos</h1>
+    <table class="table table-hover">
+        <thead class="text-center">
+            <tr>
+                <th scope="col">Time</th>
+                <!-- <th scope="col">Time</th> -->
+                <th scope="col">Pontos</th>
+                <th scope="col">Rounds</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor="let obj of arrayFinalFaseDeGrupos">
+                <th scope="row">{{ obj.nome }}</th>
+                <td>
+                    <b>{{ obj.pontos }}</b>
+                </td>
+                <td>
+                    <b>{{ obj.rounds }}</b>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h1 class="text-center">Tabela da grande final</h1>
+    <table class="table table-hover">
+        <thead class="text-center">
+            <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Rounds</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let obj of final" class="text-center">
+            <tr class="table-success">
+                <th scope="row">Campeão {{ obj.campeao.nome }}</th>
+                <td>
+                    <b>{{ obj.campeao.rounds }}</b>
+                </td>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">Vice {{ obj.vice.nome }}</th>
+                <td>
+                    <b>{{ obj.vice.rounds }}</b>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<router-outlet></router-outlet>
